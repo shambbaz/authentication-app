@@ -1,14 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
-
 project(Autentikointijarjestelma)
 
-set(CMAKE_CXX_STANDARD 11)
+# Lähdekoodit
+set(SOURCES main.cpp test_auth.cpp)
 
-# Lisätään hakemisto, jossa lähdekoodit sijaitsevat
-include_directories(${PROJECT_SOURCE_DIR})
+# Lisää suoritettavat tiedostot
+add_executable(Autentikointijarjestelma ${SOURCES})
 
-# Lisää lähdekoodit ja luo kohde
-add_executable(AuthenticationSystem auth.c test_auth.c)
-
-# Lisää testauskehykset
-target_link_libraries(AuthenticationSystem gtest gtest_main)
+# Linkkaa testauskehykselle
+target_link_libraries(Autentikointijarjestelma gtest gtest_main)

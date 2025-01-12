@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/auth.c" "CMakeFiles/AuthenticationSystem.dir/auth.c.obj" "gcc" "CMakeFiles/AuthenticationSystem.dir/auth.c.obj.d"
-  "C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/test_auth.c" "CMakeFiles/AuthenticationSystem.dir/test_auth.c.obj" "gcc" "CMakeFiles/AuthenticationSystem.dir/test_auth.c.obj.d"
+  "C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/main.cpp" "CMakeFiles/Autentikointijarjestelma.dir/main.cpp.obj" "gcc" "CMakeFiles/Autentikointijarjestelma.dir/main.cpp.obj.d"
+  "C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/test_auth.cpp" "CMakeFiles/Autentikointijarjestelma.dir/test_auth.cpp.obj" "gcc" "CMakeFiles/Autentikointijarjestelma.dir/test_auth.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

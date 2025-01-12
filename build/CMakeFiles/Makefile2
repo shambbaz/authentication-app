@@ -44,10 +44,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\CMake\bin\cmake.exe"
+CMAKE_COMMAND = C:\msys64\mingw64\bin\cmake.exe
 
 # The command to remove a file.
-RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
+RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -62,11 +62,11 @@ CMAKE_BINARY_DIR = C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\aut
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/AuthenticationSystem.dir/all
+all: CMakeFiles/Autentikointijarjestelma.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/AuthenticationSystem.dir/codegen
+codegen: CMakeFiles/Autentikointijarjestelma.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -74,40 +74,39 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/AuthenticationSystem.dir/clean
+clean: CMakeFiles/Autentikointijarjestelma.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/AuthenticationSystem.dir
+# Target rules for target CMakeFiles/Autentikointijarjestelma.dir
 
 # All Build rule for target.
-CMakeFiles/AuthenticationSystem.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\autentikointijärjestelmä\build\CMakeFiles --progress-num=1,2,3 "Built target AuthenticationSystem"
-.PHONY : CMakeFiles/AuthenticationSystem.dir/all
+CMakeFiles/Autentikointijarjestelma.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\autentikointijärjestelmä\build\CMakeFiles --progress-num=1,2,3 "Built target Autentikointijarjestelma"
+.PHONY : CMakeFiles/Autentikointijarjestelma.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/AuthenticationSystem.dir/rule: cmake_check_build_system
+CMakeFiles/Autentikointijarjestelma.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\autentikointijärjestelmä\build\CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/AuthenticationSystem.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Autentikointijarjestelma.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\autentikointijärjestelmä\build\CMakeFiles 0
-.PHONY : CMakeFiles/AuthenticationSystem.dir/rule
+.PHONY : CMakeFiles/Autentikointijarjestelma.dir/rule
 
 # Convenience name for target.
-AuthenticationSystem: CMakeFiles/AuthenticationSystem.dir/rule
-.PHONY : AuthenticationSystem
+Autentikointijarjestelma: CMakeFiles/Autentikointijarjestelma.dir/rule
+.PHONY : Autentikointijarjestelma
 
 # codegen rule for target.
-CMakeFiles/AuthenticationSystem.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\autentikointijärjestelmä\build\CMakeFiles --progress-num=1,2,3 "Finished codegen for target AuthenticationSystem"
-.PHONY : CMakeFiles/AuthenticationSystem.dir/codegen
+CMakeFiles/Autentikointijarjestelma.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/codegen
+.PHONY : CMakeFiles/Autentikointijarjestelma.dir/codegen
 
 # clean rule for target.
-CMakeFiles/AuthenticationSystem.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/clean
-.PHONY : CMakeFiles/AuthenticationSystem.dir/clean
+CMakeFiles/Autentikointijarjestelma.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/clean
+.PHONY : CMakeFiles/Autentikointijarjestelma.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

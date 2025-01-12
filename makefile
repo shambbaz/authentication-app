@@ -1,14 +1,22 @@
-CC = gcc
-CFLAGS = -Wall -g
-SOURCES = main.c test_auth.c
-OBJECTS = $(SOURCES:.c=.o)
+# C++ kääntäjä
+CXX = g++
+CXXFLAGS = -Wall -g
+
+# Lähdekoodit (muutettu .cpp:ksi)
+SOURCES = main.cpp test_auth.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+
+# Suoritettava tiedosto
 EXEC = autentikointijärjestelmä
 
+# Rakentaminen
 $(EXEC): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $(EXEC)
+	$(CXX) $(OBJECTS) -o $(EXEC)
 
-.c.o:
-	$(CC) $(CFLAGS) -c $< -o $@
+# Käännä .cpp -> .o
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Puhdistaminen
 clean:
 	rm -f $(OBJECTS) $(EXEC)

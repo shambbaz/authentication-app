@@ -47,10 +47,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\CMake\bin\cmake.exe"
+CMAKE_COMMAND = C:\msys64\mingw64\bin\cmake.exe
 
 # The command to remove a file.
-RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
+RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -66,8 +66,8 @@ CMAKE_BINARY_DIR = C:\Users\sirvi\OneDrive\Desktop\autentikointijärjestelma\aut
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
+	C:\msys64\mingw64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -116,65 +116,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named AuthenticationSystem
+# Target rules for targets named Autentikointijarjestelma
 
 # Build rule for target.
-AuthenticationSystem: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 AuthenticationSystem
-.PHONY : AuthenticationSystem
+Autentikointijarjestelma: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Autentikointijarjestelma
+.PHONY : Autentikointijarjestelma
 
 # fast build rule for target.
-AuthenticationSystem/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/build
-.PHONY : AuthenticationSystem/fast
+Autentikointijarjestelma/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/build
+.PHONY : Autentikointijarjestelma/fast
 
-auth.obj: auth.c.obj
-.PHONY : auth.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-auth.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/auth.c.obj
-.PHONY : auth.c.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-auth.i: auth.c.i
-.PHONY : auth.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-auth.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/auth.c.i
-.PHONY : auth.c.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-auth.s: auth.c.s
-.PHONY : auth.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-auth.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/auth.c.s
-.PHONY : auth.c.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/main.cpp.s
+.PHONY : main.cpp.s
 
-test_auth.obj: test_auth.c.obj
+test_auth.obj: test_auth.cpp.obj
 .PHONY : test_auth.obj
 
 # target to build an object file
-test_auth.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/test_auth.c.obj
-.PHONY : test_auth.c.obj
+test_auth.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/test_auth.cpp.obj
+.PHONY : test_auth.cpp.obj
 
-test_auth.i: test_auth.c.i
+test_auth.i: test_auth.cpp.i
 .PHONY : test_auth.i
 
 # target to preprocess a source file
-test_auth.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/test_auth.c.i
-.PHONY : test_auth.c.i
+test_auth.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/test_auth.cpp.i
+.PHONY : test_auth.cpp.i
 
-test_auth.s: test_auth.c.s
+test_auth.s: test_auth.cpp.s
 .PHONY : test_auth.s
 
 # target to generate assembly for a file
-test_auth.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AuthenticationSystem.dir\build.make CMakeFiles/AuthenticationSystem.dir/test_auth.c.s
-.PHONY : test_auth.c.s
+test_auth.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Autentikointijarjestelma.dir\build.make CMakeFiles/Autentikointijarjestelma.dir/test_auth.cpp.s
+.PHONY : test_auth.cpp.s
 
 # Help Target
 help:
@@ -184,10 +184,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... AuthenticationSystem
-	@echo ... auth.obj
-	@echo ... auth.i
-	@echo ... auth.s
+	@echo ... Autentikointijarjestelma
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... test_auth.obj
 	@echo ... test_auth.i
 	@echo ... test_auth.s
