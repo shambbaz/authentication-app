@@ -1,0 +1,31 @@
+name: CMake Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up CMake
+      uses: lukka/run-cmake@v2
+      with:
+        cmake-version: '3.21.0'  # Valitse tarvittaessa haluamasi CMake-versio
+
+    - name: Install dependencies
+      run: sudo apt-get install -y build-essential
+
+    - name: Build with CMake
+      run: cmake . && make
+
+    - name: Run tests
+      run: make test
