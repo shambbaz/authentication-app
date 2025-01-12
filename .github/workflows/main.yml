@@ -17,11 +17,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    # 2. Aseta CMake
-    - name: Set up CMake
-      uses: actions/setup-cmake@v2  # Oikea toimenpide CMake asennukseen
-      with:
-        cmake-version: '3.21.2'  # Määritä CMake versionumero (esim. 3.21.2)
+    # 2. Asenna CMake (manuaalisesti)
+    - name: Install CMake
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake
 
     # 3. Asenna riippuvuudet, kuten gtest, jos niitä tarvitaan
     - name: Install dependencies
