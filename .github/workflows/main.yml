@@ -19,10 +19,9 @@ jobs:
 
     # 2. Aseta CMake
     - name: Set up CMake
-      uses: lukka/run-cmake@v2
+      uses: actions/setup-cmake@v2  # Oikea toimenpide CMake asennukseen
       with:
-        cmakeVersion: '3.21.2'  # Voit valita version
-        cmakeListsTxtPath: './CMakeLists.txt'  # Polku CMake-tiedostoon
+        cmake-version: '3.21.2'  # Määritä CMake versionumero (esim. 3.21.2)
 
     # 3. Asenna riippuvuudet, kuten gtest, jos niitä tarvitaan
     - name: Install dependencies
@@ -30,7 +29,7 @@ jobs:
 
     # 4. Käännä projekti
     - name: Build with CMake
-      run: cmake --build .
+      run: cmake -S . -B build  # Käyttää nykyistä hakemistoa (S) ja luo build-hakemiston
 
     # 5. Suorita testit, jos käytät testauskehystä, kuten Google Test
     - name: Run tests
