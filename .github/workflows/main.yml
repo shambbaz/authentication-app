@@ -1,4 +1,4 @@
-name: CMake Build
+name: Build and Test CMake project
 
 on:
   push:
@@ -10,22 +10,28 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Tämä voi olla myös windows-latest tai macos-latest
 
     steps:
+    # 1. Checkout-koodi
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # 2. Aseta CMake
     - name: Set up CMake
       uses: lukka/run-cmake@v2
       with:
-        cmake-version: '3.21.0'  # Valitse tarvittaessa haluamasi CMake-versio
+        cmakeVersion: '3.21.2'  # Voit valita version
+        cmakeListsTxtPath: './CMakeLists.txt'  # Polku CMake-tiedostoon
 
+    # 3. Asenna riippuvuudet, kuten gtest, jos niitä tarvitaan
     - name: Install dependencies
-      run: sudo apt-get install -y build-essential
+      run: sudo apt-get install libgtest-dev
 
+    # 4. Käännä projekti
     - name: Build with CMake
-      run: cmake . && make
+      run: cmake --build .
 
+    # 5. Suorita testit, jos käytät testauskehystä, kuten Google Test
     - name: Run tests
-      run: make test
+      run: ctest --output-on-failure
