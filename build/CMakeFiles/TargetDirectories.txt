@@ -1,0 +1,3 @@
+C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/build/CMakeFiles/AuthenticationSystem.dir
+C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/build/CMakeFiles/edit_cache.dir
+C:/Users/sirvi/OneDrive/Desktop/autentikointijärjestelma/autentikointijärjestelmä/build/CMakeFiles/rebuild_cache.dir
